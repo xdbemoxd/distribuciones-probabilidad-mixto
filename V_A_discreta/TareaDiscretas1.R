@@ -5,11 +5,9 @@
 # -----------------------------------------------
 
 # a) Simulación de 10,000 muestras
-set.seed(0)                             # Semilla para reproducibilidad
-lambda <- 5                             # promedio
-muestras <- rpois(n = 10000, lambda)    # genera numeros aleatorios con distribucion poison (como lambda=5, rondan este numero)
-cat(muestras[1:10])                     # muestra las primeras 10 muestras
-
+set.seed(0)                               # Semilla para reproducibilidad
+lambda <- 5                               # promedio
+n_muestras <- rpois(n = 10000, lambda)    # genera numeros aleatorios con distribucion poison (como lambda=5, rondan este numero)
 
 # b) Probabilidad de exactamente 3 clientes
 prob_teorica <- dpois(3, lambda)        # Valor teórico P(X=3)=(λ^3)/(n!*e^λ)=5^3/(6*e^3)=125/(6*e^5)=0.140373895
@@ -48,3 +46,4 @@ legend("topright",
   legend = c("Simulación", "Teórica"),
   fill = c("lightblue", "red")
 )     
+
