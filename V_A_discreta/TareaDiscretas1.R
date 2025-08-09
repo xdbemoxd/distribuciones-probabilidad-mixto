@@ -5,7 +5,7 @@
 # -----------------------------------------------
 
 # a) Simulación de 10,000 muestras
-set.seed(0)                           # Semilla para reproducibilidad
+set.seed(0)                             # Semilla para reproducibilidad
 lambda <- 5                             # promedio
 muestras <- rpois(n = 10000, lambda)    # genera numeros aleatorios con distribucion poison (como lambda=5, rondan este numero)
 cat(muestras[1:10])                     # muestra las primeras 10 muestras
@@ -27,10 +27,8 @@ hist(
   main = "Distribución de Poisson (λ=5)",      #titulo del plot
   xlab = "Número de clientes",                 #titulo del eje x
   ylab = "Distribucion",                       #titulo del eje y
-  col = "lightblue"
-              
+  col = "lightblue"     
 )
-
 
 # Superponer distribucion teórica
 valores_xlab <- 0:max(muestras)               #valores del eje x
@@ -39,15 +37,14 @@ valores_ylab <- dpois(x_vals, lambda,0)       #vector con los valores para X=n
 lines(
   valores_xlab,                              
   valores_ylab, 
-  type = "b",      #decoracion de la funcion
+  type = "b",      #tipo de linea
   col = "red", 
   lwd = 2, 
   pch = 19
 )
      
 # cuadro indicando el color de las funciones     
-   legend("topright", 
-          legend = c("Simulación", "Teórica"),
-          fill = c("lightblue", "red"))
-     
-     
+legend("topright", 
+  legend = c("Simulación", "Teórica"),
+  fill = c("lightblue", "red")
+)     
