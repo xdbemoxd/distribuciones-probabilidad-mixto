@@ -10,7 +10,7 @@ tasa <- 1/media  # λ = 1/24
 n_muestras <- 50000
 
 # a) Simulación de los tiempos de vida
-set.seed(1)
+set.seed(0)
 tiempos_vida <- rexp(n_muestras, rate = tasa)
 
 # b) Probabilidad de durar más de 36 meses
@@ -20,7 +20,6 @@ prob_teorica <- 1 - pexp(36, rate = tasa)   #P(X > 36) = 1 - P(X ≤ 36)
 # Comparación
 cat("Probabilidad simulada (>36 meses):", prob_simulada, "\n")
 cat("Probabilidad teórica (>36 meses):",  prob_teorica,  "\n")
-
 
 # c) Histograma y densidad teórica
 hist(
@@ -40,10 +39,13 @@ curve(
   to = max(tiempos_vida), 
   col = "red", 
   lwd = 2, 
-  add = TRUE)
+  add = TRUE
+)
 
 legend("topright", 
-  legend = c("Simulación", "Teórica"),
-  col = c("lightblue", "red"),
-  fill = c("lightblue", "red"))
+   legend = c("Simulación", "Teórica"),
+   col = c("lightblue", "red"),
+   fill = c("lightblue", "red")
+)
+
 
