@@ -31,14 +31,14 @@ hist(
 )
 
 # Superponer densidad teórica
-valores_xlab <- 0:n_pruebas                               #valores del eje x
-valores_ylab <- dbinom(valores_xlab, n_pruebas, p_exito)  #vector con los valores para X=n
+valores_x <- 0:n_pruebas                               #valores del eje x
+valores_y <- dbinom(valores_x, n_pruebas, p_exito)  #vector con los valores para X=n
 lines(
-  valores_xlab, 
-    valores_ylab, 
-    type = "b", 
-    col = "red", 
-    lwd = 2
+  valores_x, 
+  valores_y, 
+  type = "b", 
+  col = "red", 
+  lwd = 2
 )
 
 # cuadro indicando el color de las funciones    
@@ -48,3 +48,4 @@ legend("topleft",
 )
 
      
+
