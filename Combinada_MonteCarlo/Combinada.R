@@ -49,11 +49,12 @@ hist(
 )
 
 # Superponer distribución binomial teórica
-valores_xlab <- 0:100           #vector de valores discretos
+valores_x <- 0:100           #vector de valores discretos
 lines(
   valores_xlab, 
-  dbinom(valores_xlab, 100, prob_teorica), 
+  dbinom(valores_x, 100, prob_teorica), 
   type = "b", 
   col = "red", 
   lwd = 2
 )
+
