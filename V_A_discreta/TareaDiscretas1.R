@@ -23,7 +23,7 @@ hist(
   breaks = seq(0, max(n_muestras)),              #barras para cada valor
   freq = FALSE,                                #falso, dara la probabilidad de aparicion
   main = "Distribución de Poisson (λ=5)",      #titulo del plot
-  xlab = "Número de clientes",                 #titulo del eje x
+  xlab = "Numero de clientes",                 #titulo del eje x
   ylab = "Distribucion",                       #titulo del eje y
   col = "lightblue"     
 )
