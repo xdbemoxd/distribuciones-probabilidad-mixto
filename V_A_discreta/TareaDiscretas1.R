@@ -30,7 +30,7 @@ hist(
 
 # Superponer distribucion teórica
 valores_x <- 0:max(n_muestras)                   #valores del eje x
-valores_y <- dpois(valores_xlab, lambda,0)       #vector con los valores para X=n
+valores_y <- dpois(valores_x, lambda,0)       #vector con los valores para X=n
 
 lines(
   valores_x,                              
@@ -46,6 +46,7 @@ legend("topright",
   legend = c("Simulación", "Teórica"),
   fill = c("lightblue", "red")
 )     
+
 
 
 
